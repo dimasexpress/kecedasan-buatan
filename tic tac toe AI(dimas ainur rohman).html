@@ -1,0 +1,653 @@
+<html>
+    <head><title>tic tac toe tul</title>
+    </head>
+    <body align="center">
+        <div> STIKOM PGRI BANYUWANGI</div>
+        <div>Nama : DIMAS AINUR ROHMAN</div>
+        <div>Nim  : 1119101808</div><br>
+       <div> hasil draw  : <label id='hd' ></label></div>
+        <div>hasil kalah : <label id='kl' ></label></div>
+        <div> <input type="button" value="reset nilai" onclick="jos()"/></div><br>
+
+ 
+        <FORM NAME="tic" method="post">
+        <INPUT TYPE="button" NAME="pilih1" class="tictac" value="     " onClick="if(document.tic.pilih1.value == '     ' && turn == 0 && mode == 1) {document.tic.pilih1.value = ' X '; pilih1T = 1; turn = 1; inpt(); proses();} else if(document.tic.pilih1.value == '     ' && turn == 1 && mode == 2) {document.tic.pilih1.value = ' X '; pilih1T = 1; turn = 0; inpt(); player1proses()} else if(document.tic.pilih1.value == '     ' && turn == 0 && mode == 2) {document.tic.pilih1.value = ' O '; pilih1T = 1; turn = 1; inpt(); player1proses()} hasildraw()">
+        <INPUT TYPE="button" NAME="pilih2" class="tictac" value="     " onClick="if(document.tic.pilih2.value == '     ' && turn == 0 && mode == 1) {document.tic.pilih2.value = ' X '; pilih2T = 1; turn = 1; inpt(); proses();} else if(document.tic.pilih2.value == '     ' && turn == 1 && mode == 2) {document.tic.pilih2.value = ' X '; pilih2T = 1; turn = 0; inpt(); player1proses()} else if(document.tic.pilih2.value == '     ' && turn == 0 && mode == 2) {document.tic.pilih2.value = ' O '; pilih2T = 1; turn = 1; inpt(); player1proses()} hasildraw()">
+        <INPUT TYPE="button" NAME="pilih3" class="tictac" value="     " onClick="if(document.tic.pilih3.value == '     ' && turn == 0 && mode == 1) {document.tic.pilih3.value = ' X '; pilih3T = 1; turn = 1; inpt(); proses();} else if(document.tic.pilih3.value == '     ' && turn == 1 && mode == 2) {document.tic.pilih3.value = ' X '; pilih3T = 1; turn = 0; inpt(); player1proses()} else if(document.tic.pilih3.value == '     ' && turn == 0 && mode == 2) {document.tic.pilih3.value = ' O '; pilih3T = 1; turn = 1; inpt(); player1proses()} hasildraw()">
+	<br />
+        <INPUT TYPE="button" NAME="pilih4" class="tictac" value="     " onClick="if(document.tic.pilih4.value == '     ' && turn == 0 && mode == 1) {document.tic.pilih4.value = ' X '; pilih4T = 1; turn = 1; inpt(); proses();} else if(document.tic.pilih4.value == '     ' && turn == 1 && mode == 2) {document.tic.pilih4.value = ' X '; pilih4T = 1; turn = 0; inpt(); player1proses()} else if(document.tic.pilih4.value == '     ' && turn == 0 && mode == 2) {document.tic.pilih4.value = ' O '; pilih4T = 1; turn = 1; inpt(); player1proses()} hasildraw()">
+        <INPUT TYPE="button" NAME="pilih5" class="tictac" value="     " onClick="if(document.tic.pilih5.value == '     ' && turn == 0 && mode == 1) {document.tic.pilih5.value = ' X '; pilih5T = 1; turn = 1; inpt(); proses();} else if(document.tic.pilih5.value == '     ' && turn == 1 && mode == 2) {document.tic.pilih5.value = ' X '; pilih5T = 1; turn = 0; inpt(); player1proses()} else if(document.tic.pilih5.value == '     ' && turn == 0 && mode == 2) {document.tic.pilih5.value = ' O '; pilih5T = 1; turn = 1; inpt(); player1proses()} hasildraw()">
+        <INPUT TYPE="button" NAME="pilih6" class="tictac" value="     " onClick="if(document.tic.pilih6.value == '     ' && turn == 0 && mode == 1) {document.tic.pilih6.value = ' X '; pilih6T = 1; turn = 1; inpt(); proses();} else if(document.tic.pilih6.value == '     ' && turn == 1 && mode == 2) {document.tic.pilih6.value = ' X '; pilih6T = 1; turn = 0; inpt(); player1proses()} else if(document.tic.pilih6.value == '     ' && turn == 0 && mode == 2) {document.tic.pilih6.value = ' O '; pilih6T = 1; turn = 1; inpt(); player1proses()} hasildraw()">
+	<br />
+        <INPUT TYPE="button" NAME="pilih7" class="tictac" value="     " onClick="if(document.tic.pilih7.value == '     ' && turn == 0 && mode == 1) {document.tic.pilih7.value = ' X '; pilih7T = 1; turn = 1; inpt(); proses();} else if(document.tic.pilih7.value == '     ' && turn == 1 && mode == 2) {document.tic.pilih7.value = ' X '; pilih7T = 1; turn = 0; inpt(); player1proses()} else if(document.tic.pilih7.value == '     ' && turn == 0 && mode == 2) {document.tic.pilih7.value = ' O '; pilih7T = 1; turn = 1; inpt(); player1proses()} hasildraw()">
+        <INPUT TYPE="button" NAME="pilih8" class="tictac" value="     " onClick="if(document.tic.pilih8.value == '     ' && turn == 0 && mode == 1) {document.tic.pilih8.value = ' X '; pilih8T = 1; turn = 1; inpt(); proses();} else if(document.tic.pilih8.value == '     ' && turn == 1 && mode == 2) {document.tic.pilih8.value = ' X '; pilih8T = 1; turn = 0; inpt(); player1proses()} else if(document.tic.pilih8.value == '     ' && turn == 0 && mode == 2) {document.tic.pilih8.value = ' O '; pilih8T = 1; turn = 1; inpt(); player1proses()} hasildraw()">
+        <INPUT TYPE="button" NAME="pilih9" class="tictac" value="     " onClick="if(document.tic.pilih9.value == '     ' && turn == 0 && mode == 1) {document.tic.pilih9.value = ' X '; pilih9T = 1; turn = 1; inpt(); proses();} else if(document.tic.pilih9.value == '     ' && turn == 1 && mode == 2) {document.tic.pilih9.value = ' X '; pilih9T = 1; turn = 0; inpt(); player1proses()} else if(document.tic.pilih9.value == '     ' && turn == 0 && mode == 2) {document.tic.pilih9.value = ' O '; pilih9T = 1; turn = 1; inpt(); player1proses()} hasildraw()">
+        </form></body>
+        
+
+<SCRIPT>
+        if (document.all||document.getElementById){
+        document.write('<style>.tictac{')
+        document.write('width:150px;height:150px;')
+        document.write('}</style>')
+        }
+
+
+	
+	var pilih1;
+        var pilih2;
+        var pilih3;
+        var pilih4;
+        var pilih5;
+        var pilih6;
+        var pilih7;
+        var pilih8;
+        var pilih9;     
+        
+        var pilih1T = 0;
+        var pilih2T = 0;
+        var pilih3T = 0;
+        var pilih4T = 0;
+        var pilih5T = 0;
+        var pilih6T = 0;
+        var pilih7T = 0;
+        var pilih8T = 0;
+        var pilih9T = 0;
+        var moveCount = 0;
+        var turn = 0;
+        var mode = 1;
+        function dgid(a){return document.getElementById(a);}
+        var ganjil =[];
+        var genap = [];
+        
+ function jos(){
+        ganjil =[];dgid('hd').innerHTML=genap.length;
+        genap = [];dgid('kl').innerHTML=ganjil.length;
+ }       
+function inpt(){
+        pilih1 = document.tic.pilih1.value;
+        pilih2 = document.tic.pilih2.value;
+        pilih3 = document.tic.pilih3.value;
+        pilih4 = document.tic.pilih4.value;
+        pilih5 = document.tic.pilih5.value;
+        pilih6 = document.tic.pilih6.value;
+        pilih7 = document.tic.pilih7.value;
+        pilih8 = document.tic.pilih8.value;
+        pilih9 = document.tic.pilih9.value;
+        }
+
+function reset(){
+          document.tic.pilih1.value = "     ";
+          document.tic.pilih2.value = "     ";
+          document.tic.pilih3.value = "     ";
+          document.tic.pilih4.value = "     ";
+          document.tic.pilih5.value = "     ";
+          document.tic.pilih6.value = "     ";
+          document.tic.pilih7.value = "     ";
+          document.tic.pilih8.value = "     ";
+          document.tic.pilih9.value = "     ";
+          pilih1T = 0;
+          pilih2T = 0;
+          pilih3T = 0;
+          pilih4T = 0;
+          pilih5T = 0;
+          pilih6T = 0;
+          pilih7T = 0;
+          pilih8T = 0;
+          pilih9T = 0;
+          inpt()
+          turn = 0;
+          moveCount = 0;
+        }
+        
+function hasildraw()
+        {
+          inpt()
+          moveCount = pilih1T + pilih2T + pilih3T + pilih4T + pilih5T + pilih6T + pilih7T + pilih8T + pilih9T 
+          if(moveCount == 9)
+          {
+            reset()
+            alert("HASIL DRAW..COBA LAGI..?!!") 
+            var gh = [1];
+              for(var q=0; q<gh;q++){
+                genap.push(gh[q]);
+              }
+              
+}
+dgid('hd').innerHTML=genap.length;
+
+		
+		
+          }
+        
+      
+function proses(){
+          if(pilih1 == " X " && pilih2 == " X " && pilih3 == " X ")
+          {
+            alert("maaf anda kurang pandai :D")
+            reset()
+          } 
+          else if(pilih4 == " X " && pilih5 == " X " && pilih6 == " X ")
+          {
+            alert("maaf anda kurang pandai :D")
+            reset()
+          } 
+          else if(pilih7 == " X " && pilih8 == " X " && pilih9 == " X ")
+          {
+            alert("maaf anda kurang pandai :D")
+            reset()
+          }
+          else if(pilih1 == " X " && pilih5 == " X " && pilih9 == " X ")
+          {
+            alert("maaf anda kurang pandai :D")
+            reset()
+          }
+          else if(pilih1 == " X " && pilih4 == " X " && pilih7 == " X ")
+          {
+            alert("maaf anda kurang pandai :D")
+            reset()
+          }
+          else if(pilih2 == " X " && pilih5 == " X " && pilih8 == " X ")
+          {
+            alert("maaf anda kurang pandai :D")
+            reset()
+          }
+          else if(pilih3 == " X " && pilih6 == " X " && pilih9 == " X ")
+          {
+            alert("maaf anda kurang pandai :D")
+            reset()
+          }
+          else if(pilih1 == " X " && pilih5 == " X " && pilih9 == " X ")
+          {
+            alert("maaf anda kurang pandai :D")
+            reset()
+          }
+          else if(pilih3 == " X " && pilih5 == " X " && pilih7 == " X ")
+          {
+            alert("maaf anda kurang pandai :D")
+            reset()
+          }
+          else
+          {
+            winproses()
+            proses2()
+            hasildraw()  
+          } 
+        }
+        
+        function proses2()
+        {
+          inpt()
+          hasildraw()
+          if(pilih1 == " O " && pilih2 == " O " && pilih3 == " O ")
+          {
+            alert("ANDA KALAH..MAU COBA LAGI..?")
+            reset()
+            var ff = [1];
+            for(var q=0; q<ff;q++){
+                ganjil.push(ff[q]);
+              }
+            
+          } 
+          else if(pilih4 == " O " && pilih5 == " O " && pilih6 == " O ")
+          {
+            alert("ANDA KALAH..MAU COBA LAGI..?")
+            var ff = [1];
+            for(var q=0; q<ff;q++){
+                ganjil.push(ff[q]);
+              }
+            reset()
+          } 
+          else if(pilih7 == " O " && pilih8 == " O " && pilih9 == " O ")
+          {
+            alert("ANDA KALAH..MAU COBA LAGI..?")
+            var ff = [1];
+            for(var q=0; q<ff;q++){
+                ganjil.push(ff[q]);
+              }
+            reset()
+          }
+          else if(pilih1 == " O " && pilih5 == " O " && pilih9 == " O ")
+          {
+            alert("ANDA KALAH..MAU COBA LAGI..?")
+            var ff = [1];
+            for(var q=0; q<ff;q++){
+                ganjil.push(ff[q]);
+              }
+            reset()
+          }
+          else if(pilih1 == " O " && pilih4 == " O " && pilih7 == " O ")
+          {
+            alert("ANDA KALAH..MAU COBA LAGI..?")
+            var ff = [1];
+            for(var q=0; q<ff;q++){
+                ganjil.push(ff[q]);
+              }
+            reset()
+          }
+          else if(pilih2 == " O " && pilih5 == " O " && pilih8 == " O ")
+          {
+            alert("ANDA KALAH..MAU COBA LAGI..?")
+            var ff = [1];
+            for(var q=0; q<ff;q++){
+                ganjil.push(ff[q]);
+              }
+            reset()
+          }
+          else if(pilih3 == " O " && pilih6 == " O " && pilih9 == " O ")
+          {
+            alert("ANDA KALAH..MAU COBA LAGI..?")
+            var ff = [1];
+            for(var q=0; q<ff;q++){
+                ganjil.push(ff[q]);
+              }
+            reset()
+          }
+          else if(pilih1 == " O " && pilih5 == " O " && pilih9 == " O ")
+          {
+            alert("ANDA KALAH..MAU COBA LAGI..?")
+            var ff = [1];
+            for(var q=0; q<ff;q++){
+                ganjil.push(ff[q]);
+              }
+            reset()
+          }
+          else if(pilih3 == " O " && pilih5 == " O " && pilih7 == " O ")
+          {
+            alert("ANDA KALAH..MAU COBA LAGI..?")
+            var ff = [1];
+            for(var q=0; q<ff;q++){
+                ganjil.push(ff[q]);
+              }
+            reset()
+           
+              
+          }
+         
+              dgid('kl').innerHTML=ganjil.length;
+        }
+        
+        function winproses()
+        {
+          proses2()
+          if(pilih1 == " O " && pilih2 == " O " && pilih3T == 0 && turn == 1)
+          {
+            document.tic.pilih3.value = " O "
+            pilih3T = 1;
+            turn = 0;
+          }
+          else if(pilih2 == " O " && pilih3 == " O " && pilih1T == 0 && turn == 1)
+          {
+            document.tic.pilih1.value = " O "
+            pilih1T = 1;
+            turn = 0;
+          }
+          else if(pilih4 == " O " && pilih5 == " O " && pilih6T == 0 && turn == 1)
+          {
+            document.tic.pilih6.value = " O "
+            pilih6T = 1;
+            turn = 0;
+          }
+          else if(pilih5 == " O " && pilih6 == " O " && pilih4T == 0 && turn == 1)
+          {
+            document.tic.pilih4.value = " O "
+            pilih4T = 1;
+            turn = 0;
+          }
+          else if(pilih7 == " O " && pilih8 == " O " && pilih9T == 0 && turn == 1)
+          {
+            document.tic.pilih9.value = " O "
+            pilih9T = 1;
+            turn = 0;
+          }
+          else if(pilih8 == " O " && pilih9 == " O " && pilih7T == 0 && turn == 1)
+          {
+            document.tic.pilih7.value = " O "
+            pilih7T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " O " && pilih5 == " O " && pilih9T == 0 && turn == 1)
+          {
+            document.tic.pilih9.value = " O "
+            pilih9T = 1;
+            turn = 0;
+          }
+          else if(pilih5 == " O " && pilih9 == " O " && pilih1T == 0 && turn == 1)
+          {
+            document.tic.pilih1.value = " O "
+            pilih1T = 1;
+            turn = 0;
+          }
+          else if(pilih3 == " O " && pilih5 == " O " && pilih7T == 0 && turn == 1)
+          {
+            document.tic.pilih7.value = " O "
+            pilih7T = 1;
+            turn = 0;
+          }
+          else if(pilih7 == " O " && pilih5 == " O " && pilih3T == 0 && turn == 1)
+          {
+            document.tic.pilih3.value = " O "
+            pilih3T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " O " && pilih3 == " O " && pilih2T == 0 && turn == 1)
+          {
+            document.tic.pilih2.value = " O "
+            pilih2T = 1;
+            turn = 0;
+          }
+          else if(pilih4 == " O " && pilih6 == " O " && pilih5T == 0 && turn == 1)
+          {
+            document.tic.pilih5.value = " O "
+            pilih5T = 1;
+            turn = 0;
+          }
+          else if(pilih7 == " O " && pilih9 == " O " && pilih8T == 0 && turn == 1)
+          {
+            document.tic.pilih8.value = " O "
+            pilih8T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " O " && pilih7 == " O " && pilih4T == 0 && turn == 1)
+          {
+            document.tic.pilih4.value = " O "
+            pilih4T = 1;
+            turn = 0;
+          }
+          else if(pilih2 == " O " && pilih8 == " O " && pilih5T == 0 && turn == 1)
+          {
+            document.tic.pilih5.value = " O "
+            pilih5T = 1;
+            turn = 0;
+          }
+          else if(pilih3 == " O " && pilih9 == " O " && pilih6T == 0 && turn == 1)
+          {
+            document.tic.pilih6.value = " O "
+            pilih6T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " O " && pilih5 == " O " && pilih9T == 0 && turn == 1)
+          {
+            document.tic.pilih9.value = " O "
+            pilih9T = 1;
+            turn = 0;
+          }
+          else if(pilih4 == " O " && pilih7 == " O " && pilih1T == 0 && turn == 1)
+          {
+            document.tic.pilih1.value = " O "
+            pilih1T = 1;
+            turn = 0;
+          }
+          else if(pilih5 == " O " && pilih8 == " O " && pilih2T == 0 && turn == 1)
+          {
+            document.tic.pilih2.value = " O "
+            pilih2T = 1;
+            turn = 0;
+          }
+          else if(pilih6 == " O " && pilih9 == " O " && pilih3T == 0 && turn == 1)
+          {
+            document.tic.pilih3.value = " O "
+            pilih3T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " O " && pilih4 == " O " && pilih7T == 0 && turn == 1)
+          {
+            document.tic.pilih7.value = " O "
+            pilih7T = 1;
+            turn = 0;
+          }
+          else if(pilih2 == " O " && pilih5 == " O " && pilih8T == 0 && turn == 1)
+          {
+            document.tic.pilih8.value = " O "
+            pilih8T = 1;
+            turn = 0;
+          }
+          else if(pilih3 == " O " && pilih6 == " O " && pilih9T == 0 && turn == 1)
+          {
+            document.tic.pilih9.value = " O "
+            pilih9T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " O " && pilih9 == " O " && pilih5T == 0 && turn == 1)
+          {
+            document.tic.pilih5.value = " O "
+            pilih5T = 1;
+            turn = 0;
+          }
+          else if(pilih3 == " O " && pilih7 == " O " && pilih5T == 0 && turn == 1)
+          {
+            document.tic.pilih5.value = " O "
+            pilih5T = 1;
+            turn = 0;
+          }
+          else
+          {
+            computer()
+          }
+          proses2()
+        }
+        function computer()
+        {
+          proses2()
+          if(pilih1 == " X " && pilih2 == " X " && pilih3T == 0 && turn == 1)
+          {
+            document.tic.pilih3.value = " O "
+            pilih3T = 1;
+            turn = 0;
+          }
+          else if(pilih2 == " X " && pilih3 == " X " && pilih1T == 0 && turn == 1)
+          {
+            document.tic.pilih1.value = " O "
+            pilih1T = 1;
+            turn = 0;
+          }
+          else if(pilih4 == " X " && pilih5 == " X " && pilih6T == 0 && turn == 1)
+          {
+            document.tic.pilih6.value = " O "
+            pilih6T = 1;
+            turn = 0;
+          }
+          else if(pilih5 == " X " && pilih6 == " X " && pilih4T == 0 && turn == 1)
+          {
+            document.tic.pilih4.value = " O "
+            pilih4T = 1;
+            turn = 0;
+          }
+          else if(pilih7 == " X " && pilih8 == " X " && pilih9T == 0 && turn == 1)
+          {
+            document.tic.pilih9.value = " O "
+            pilih9T = 1;
+            turn = 0;
+          }
+          else if(pilih8 == " X " && pilih9 == " X " && pilih7T == 0 && turn == 1)
+          {
+            document.tic.pilih7.value = " O "
+            pilih7T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " X " && pilih5 == " X " && pilih9T == 0 && turn == 1)
+          {
+            document.tic.pilih9.value = " O "
+            pilih9T = 1;
+            turn = 0;
+          }
+          else if(pilih5 == " X " && pilih9 == " X " && pilih1T == 0 && turn == 1)
+          {
+            document.tic.pilih1.value = " O "
+            pilih1T = 1;
+            turn = 0;
+          }
+          else if(pilih3 == " X " && pilih5 == " X " && pilih7T == 0 && turn == 1)
+          {
+            document.tic.pilih7.value = " O "
+            pilih7T = 1;
+            turn = 0;
+          }
+          else if(pilih7 == " X " && pilih5 == " X " && pilih3T == 0 && turn == 1)
+          {
+            document.tic.pilih3.value = " O "
+            pilih3T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " X " && pilih3 == " X " && pilih2T == 0 && turn == 1)
+          {
+            document.tic.pilih2.value = " O "
+            pilih2T = 1;
+            turn = 0;
+          }
+          else if(pilih4 == " X " && pilih6 == " X " && pilih5T == 0 && turn == 1)
+          {
+            document.tic.pilih5.value = " O "
+            pilih5T = 1;
+            turn = 0;
+          }
+          else if(pilih7 == " X " && pilih9 == " X " && pilih8T == 0 && turn == 1)
+          {
+            document.tic.pilih8.value = " O "
+            pilih8T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " X " && pilih7 == " X " && pilih4T == 0 && turn == 1)
+          {
+            document.tic.pilih4.value = " O "
+            pilih4T = 1;
+            turn = 0;
+          }
+          else if(pilih2 == " X " && pilih8 == " X " && pilih5T == 0 && turn == 1)
+          {
+            document.tic.pilih5.value = " O "
+            pilih5T = 1;
+            turn = 0;
+          }
+          else if(pilih3 == " X " && pilih9 == " X " && pilih6T == 0 && turn == 1)
+          {
+            document.tic.pilih6.value = " O "
+            pilih6T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " X " && pilih5 == " X " && pilih9T == 0 && turn == 1)
+          {
+            document.tic.pilih9.value = " O "
+            pilih9T = 1;
+            turn = 0;
+          }
+          else if(pilih4 == " X " && pilih7 == " X " && pilih1T == 0 && turn == 1)
+          {
+            document.tic.pilih1.value = " O "
+            pilih1T = 1;
+            turn = 0;
+          }
+          else if(pilih5 == " X " && pilih8 == " X " && pilih2T == 0 && turn == 1)
+          {
+            document.tic.pilih2.value = " O "
+            pilih2T = 1;
+            turn = 0;
+          }
+          else if(pilih6 == " X " && pilih9 == " X " && pilih3T == 0 && turn == 1)
+          {
+            document.tic.pilih3.value = " O "
+            pilih3T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " X " && pilih4 == " X " && pilih7T == 0 && turn == 1)
+          {
+            document.tic.pilih7.value = " O "
+            pilih7T = 1;
+            turn = 0;
+          }
+          else if(pilih2 == " X " && pilih5 == " X " && pilih8T == 0 && turn == 1)
+          {
+            document.tic.pilih8.value = " O "
+            pilih8T = 1;
+            turn = 0;
+          }
+          else if(pilih3 == " X " && pilih6 == " X " && pilih9T == 0 && turn == 1)
+          {
+            document.tic.pilih9.value = " O "
+            pilih9T = 1;
+            turn = 0;
+          }
+          else if(pilih1 == " X " && pilih9 == " X " && pilih5T == 0 && turn == 1)
+          {
+            document.tic.pilih5.value = " O "
+            pilih5T = 1;
+            turn = 0;
+          }
+          else if(pilih3 == " X " && pilih7 == " X " && pilih5T == 0 && turn == 1)
+          {
+            document.tic.pilih5.value = " O "
+            pilih5T = 1;
+            turn = 0;
+          }
+          else
+          {
+            AI()
+          }
+          proses2()
+        }
+        
+        function AI()
+        {
+          inpt()
+          if(document.tic.pilih5.value == "     " && turn == 1)
+          {
+            document.tic.pilih5.value = " O "
+            turn = 0
+            pilih5T = 1
+          }
+          else if(document.tic.pilih1.value == "     " && turn == 1)
+          {
+            document.tic.pilih1.value = " O "
+            turn = 0
+            pilih1T = 1
+          }
+          else if(document.tic.pilih9.value == "     " && turn == 1)
+          {
+            document.tic.pilih9.value = " O "
+            turn = 0
+            pilih9T = 1
+          }
+          else if(document.tic.pilih6.value == "     " && turn == 1)
+          {
+            document.tic.pilih6.value = " O "
+            turn = 0
+            pilih6T = 1
+          }
+          else if(document.tic.pilih2.value == "     " && turn == 1)
+          {
+            document.tic.pilih2.value = " O "
+            turn = 0
+            pilih2T = 1
+          }
+          else if(document.tic.pilih8.value == "     " && turn == 1)
+          {
+            document.tic.pilih8.value = " O "
+            turn = 0
+            pilih8T = 1
+          }
+          else if(document.tic.pilih3.value == "     " && turn == 1)
+          {
+            document.tic.pilih3.value = " O "
+            turn = 0
+            pilih3T = 1
+          }
+          else if(document.tic.pilih7.value == "     " && turn == 1)
+          {
+            document.tic.pilih7.value = " O "
+            turn = 0
+            pilih7T = 1
+          }
+          else if(document.tic.pilih4.value == "     " && turn == 1)
+          {
+            document.tic.pilih4.value = " O "
+            turn = 0
+            pilih4T = 1
+          }
+          proses2()
+        }
+        
+       
+       
+        </SCRIPT>
+       
+</html>
